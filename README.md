@@ -1,9 +1,12 @@
 # publisherAndSubscriber
 
 ``` javascript
+  /**
+  * created by Chanphy on 2018.12.3
+  */
   window.publisherAndSubscriber = (function() {
     var topics = {};
-    // 发布者
+    // Publisher
     function Publisher() {}
       Publisher.prototype = {
 
@@ -21,12 +24,12 @@
                           topics[topicName]['callback'][j](topics[topicName]['data'][i]);
                       }
                   }
-                  // 移除掉消费完后的消息
+                  // remove message no nedd
                   topics[topicName]['data'] = [];
               }
           }
       };
-      // 订阅者
+      // Subscriber
       function Subscriber() {}
 
       Subscriber.prototype = {
@@ -50,7 +53,7 @@
 
                   }
               }
-              // 移除掉消费完后的消息
+              // remove message no nedd
               topics[topicName]['data'] = [];
           }
       };
@@ -62,9 +65,9 @@
   })();
   
   // how to publish
-  window.publisherAndSubscriber.Publisher.publish('type', value);
+  window.publisherAndSubscriber.Publisher.publish('sometype', value);
   // how to subscrib
-  window.publisherAndSubscriber.Subscriber.subscrib('headerSelect', (v)=>{
+  window.publisherAndSubscriber.Subscriber.subscrib('sometype', (v)=>{
     your code ...
   });
 ```
