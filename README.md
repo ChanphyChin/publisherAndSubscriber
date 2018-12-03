@@ -68,6 +68,6 @@
   window.publisherAndSubscriber.Publisher.publish('sometype', value);
   // how to subscrib
   window.publisherAndSubscriber.Subscriber.subscrib('sometype', (v)=>{
-    your code ...
+    // your code ...
   });
 ```
