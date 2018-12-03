@@ -60,4 +60,11 @@
           Subscriber: new Subscriber()
       };
   })();
+  
+  // how to publish
+  window.publisherAndSubscriber.Publisher.publish('type', value);
+  // how to subscrib
+  window.publisherAndSubscriber.Subscriber.subscrib('headerSelect', (v)=>{
+    your code ...
+  });
 ```
