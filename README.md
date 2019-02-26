@@ -24,7 +24,7 @@
                           topics[topicName]['callback'][j](topics[topicName]['data'][i]);
                       }
                   }
-                  // remove message no nedd
+                  // remove message no need
                   topics[topicName]['data'] = [];
               }
           }
